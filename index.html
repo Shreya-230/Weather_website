@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="https://thumbs.dreamstime.com/b/partly-sunny-weather-15076999.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Weathervane</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <div id="logo">
+        <a href="index.html">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlWnlCct9YRMGKdAcC-CwxPjEdZdz4gg0le9sDksVUvfQzyD43R1O1-8QP9-_80WHt0Dg&usqp=CAU" alt="Weathervane" />
+        </a>
+        <a href="index.html">
+            <h2>Weathervane</h2>
+        </a>
+      </div>
+      <form action="">
+        <img
+          src="https://static-00.iconduck.com/assets.00/search-icon-2048x2048-cmujl7en.png"
+          alt="Search logo"
+          id="srLogo"
+        />
+        <label for="location"></label>
+        <input
+          type="text"
+          id="location"
+          name="location"
+          placeholder="Delhi, India"
+          required
+        />
+        <input type="submit" id="submit" value="Go" />
+      </form>
+
+
+      <div id="timeDate">
+            <div id="clock"></div>
+            <span id="day-and-date"></span>
+      </div>
+    </nav>
+    <div id="main">
+        <div id="current">
+            <h1 class="loc">Delhi, India</h1>
+            <h1 class="loc">23° C <br>Haze</h1>
+            <div  id="wPanel">
+                <div class="curW">Wind Speed : 5.0km/h</div>
+                <div class="curW">Humidity : 43.0%</div>
+                <div class="curW">Visibilty : 4.51km</div>
+                <div class="curW">Pressure : 1013hPa</div>
+                <div class="curW">Longitude:28.6519°N</div>
+                <div class="curW">Latitude : 77.2314°E</div>
+            </div>
+        </div>
+        <div id="plot">
+            <div class="stext">Hourly Forecast</div>
+            <div id="hourly">
+                <!-- will populate through javascript -->
+            </div>
+            <div  id="sPanel">
+              <div class="curW " id="sunrise">Sunrise (UTC): <span id="sunrise-time"></span></div>
+              <div class="curW"  id="sunset">Sunset (UTC): <span id="sunset-time"></span></div>
+              <div class="curW"  id="solar-noon">Noon Time (UTC): <span id="solar-noon-time"></span></div>
+              <div class="curW"  id="day-length">Day Length : <span id="day-length-time"></span></div>
+              <div class="curW"  id="twilight-begin">Twilight Beginning Time (UTC): <span id="twilight-begin-time"></span></div>              
+            </div>
+        </div>
+        <div id="fdays">
+            <div class="stext">Daily Forecast</div>
+
+            <div id="week">
+              <div>
+                <span class="cday">Today</span>
+                <span class="cdate"> 14 Feb</span>
+                <img src="https://e7.pngegg.com/pngimages/824/324/png-clipart-overcast-weather-cloudy-weather-icon-text-camera-icon.png" alt="" class="icoimg2">
+                <span class="caption-description">Sunny</span>
+                <span class="caption-min-temp">Min Temp : 11° C</span>
+                <span class="caption-max-temp">Max Temp : 24° C</span>
+              </div>
+              <div>
+                <span class="cday">Wednesday</span>
+                <span class="cdate"> 15 Feb</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlWnlCct9YRMGKdAcC-CwxPjEdZdz4gg0le9sDksVUvfQzyD43R1O1-8QP9-_80WHt0Dg&usqp=CAU" alt="" class="icoimg2">
+                <span class="caption-description">Sunny</span>
+                <span class="caption-min-temp">Min Temp : 11° C</span>
+                <span class="caption-max-temp">Max Temp : 24° C</span>
+              </div>
+
+              <div>
+                <span class="cday">Thursday</span>
+                <span class="cdate"> 16 Feb</span>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlWnlCct9YRMGKdAcC-CwxPjEdZdz4gg0le9sDksVUvfQzyD43R1O1-8QP9-_80WHt0Dg&usqp=CAU" alt="" class="icoimg2">
+                <span class="caption-description">Sunny</span>
+                <span class="caption-min-temp">Min Temp : 11° C</span>
+                <span class="caption-max-temp">Max Temp : 24° C</span>
+              </div>
+
+              <div>
+                <span class="cday">Friday</span>
+                <span class="cdate"> 17 Feb</span>
+                <img src="https://www.freeiconspng.com/uploads/weather-icon-png-8.png" alt="" class="icoimg2">
+                <span class="caption-description">Sunny</span>
+                <span class="caption-min-temp">Min Temp : 11° C</span>
+                <span class="caption-max-temp">Max Temp : 24° C</span>
+              </div>
+
+              <div>
+                <span class="cday">Saturday</span>
+                <span class="cdate"> 18 Feb</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/6717/6717835.png" alt="" class="icoimg2">
+                <span class="caption-description">Sunny</span>
+                <span class="caption-min-temp">Min Temp : 11° C</span>
+                <span class="caption-max-temp">Max Temp : 24° C</span>
+              </div>
+              <div>
+                <span class="cday">Sunday</span>
+                <span class="cdate"> 19 Feb</span>
+                <img src="https://cdn-icons-png.flaticon.com/512/1332/1332316.png" alt="" class="icoimg2">
+                <span class="caption-description">Sunny</span>
+                <span class="caption-min-temp">Min Temp : 11° C</span>
+                <span class="caption-max-temp">Max Temp : 24° C</span>
+              </div>
+            </div>
+        </div>
+  </body>
+</html>
